@@ -1,62 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fathom Audio</title>
-    
-<style>
-    body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site can't be reached</title>
 
-    .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    }
-    
-    .message {
-    min-height: 200px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 20px;
-    box-sizing: border-box;
-    }
-    
-    .center img {
-    max-width: 90%;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 20px auto;
+<style>
+* {
+box-sizing: border-box;
 }
 
+html, body {
+min-height: 100%;
+}
+
+body {
+margin: 0;
+background: #fff;
+color: #202124;
+font-family: Arial, Helvetica, sans-serif;
+-webkit-font-smoothing: antialiased;
+}
+
+.page {
+width: min(600px, calc(100% - 48px));
+margin: clamp(100px, 19vh, 175px) auto 0;
+}
+
+.file-icon {
+display: block;
+width: 64px;
+height: 64px;
+object-fit: contain;
+margin-bottom: 28px;
+}
+
+h1 {
+margin: 0 0 16px;
+font-size: 24px;
+line-height: 1.35;
+font-weight: 500;
+}
+
+p {
+margin: 0 0 12px;
+color: #5f6368;
+font-size: 14px;
+line-height: 1.55;
+}
+
+.address {
+color: #202124;
+font-weight: 700;
+overflow-wrap: anywhere;
+}
+
+.error-code {
+margin-top: 18px;
+color: #5f6368;
+font-size: 12px;
+}
+
+.actions {
+margin-top: 34px;
+}
+
+button {
+border: 0;
+border-radius: 4px;
+padding: 10px 24px;
+background: #1a73e8;
+color: #fff;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+}
+
+button:hover {
+background: #1765cc;
+}
+
+@media (max-width: 480px) {
+.page {
+margin-top: 100px;
+}
+}
 </style>
 </head>
 
 <body>
 
-    <div class="center message">
-    <p>Merry Christmas Fathom Cru!!!</p>
-    </div>
+<main class="page">
 
-    <div class="center">
-    <img src="Fathom remastered.png" alt="Fathom Audio">
-    </div>
+<img
+class="file-icon"
+src="https://devlog.rolandow.com/wp-content/uploads/2020/10/error.png"
+alt="Error icon"
+>
 
-     <div class="center message">
-    <p>Say hello to the new website :)</p>
-    </div>
-    
+<h1>This site can’t be reached</h1>
+
+<p>
+<span class="address" id="site-address">
+www.fathomaudio.uk
+</span>’s server IP address could not be found.
+</p>
+
+<p>Try:</p>
+
+<p>
+• Checking the connection<br>
+• Checking the DNS configuration
+</p>
+
+<div class="error-code">
+DNS_PROBE_FINISHED_NXDOMAIN
+</div>
+
+<div class="actions">
+<button type="button" onclick="location.reload()">
+Reload
+</button>
+</div>
+
+</main>
+
+<script>
+// Change this to the website address you want displayed.
+document.getElementById('site-address').textContent =
+www.fathomaudio.uk;
+</script>
+
 </body>
 </html>
